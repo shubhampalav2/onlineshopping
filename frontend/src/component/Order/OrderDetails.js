@@ -38,7 +38,7 @@ const OrderDetails = ({ match }) => {
               <div className="orderDetailsContainerBox">
                 <div>
                   <p>Name:</p>
-                  <span>{order.user && order.user.name}</span>
+                  <span>{order.users && order.users.name}</span>
                 </div>
                 <div>
                   <p>Phone:</p>
