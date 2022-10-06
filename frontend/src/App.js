@@ -5,7 +5,7 @@ import Header from "./component/layout/Header.js"
 import Footer from './component/layout/Footer/Footer';
 import Home from './component/Home/Home.js';
 import ProductDetails from './component/Product/ProductDetails';
-import { BrowserRouter as Router,Route} from "react-router-dom";
+import { BrowserRouter as Router,Route,Switch} from "react-router-dom";
 import Products from './component/Product/Products';
 import Search from './component/Product/Search';
 import LoginSignUp from './component/User/LoginSignUp';
@@ -68,7 +68,7 @@ getStripeApiKey()
  <ProtectedRoute exact path="/account" component={Profile}></ProtectedRoute>
  <ProtectedRoute exact path="/me/update" component={UpdateProfile}></ProtectedRoute>
  <ProtectedRoute exact path="/shipping" component={Shipping} />
-<Switch>
+ <Switch>
   <ProtectedRoute exact path="/order/confirm" component={ConfirmOrder} />
   <ProtectedRoute exact path="/order/:id" component={OrderDetails} />
   </Switch>
