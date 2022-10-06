@@ -68,8 +68,10 @@ getStripeApiKey()
  <ProtectedRoute exact path="/account" component={Profile}></ProtectedRoute>
  <ProtectedRoute exact path="/me/update" component={UpdateProfile}></ProtectedRoute>
  <ProtectedRoute exact path="/shipping" component={Shipping} />
- <ProtectedRoute exact path="/order/confirm" component={ConfirmOrder} />
- <ProtectedRoute exact path="/order/:id" component={OrderDetails} />
+<Switch>
+  <ProtectedRoute exact path="/order/confirm" component={ConfirmOrder} />
+  <ProtectedRoute exact path="/order/:id" component={OrderDetails} />
+  </Switch>
  {stripeApiKey && (
         <Elements stripe={loadStripe(stripeApiKey)}>
           <ProtectedRoute exact path="/process/payment" component={Payment} />
