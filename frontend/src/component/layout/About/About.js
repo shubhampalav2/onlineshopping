@@ -33,6 +33,7 @@ const About = () => {
             <h4>Electronic Devices and Accessories</h4>
             <h4>TV and Desktops</h4>
             <h4>Laptops</h4>
+            <h4>Others</h4>
           </div>
         </div>
       </div>
