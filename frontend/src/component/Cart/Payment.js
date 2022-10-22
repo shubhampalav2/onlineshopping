@@ -112,7 +112,7 @@ const Payment = ({ history }) => {
 
   return (
    <Fragment>
-    <MetaData title={"Payment"}></MetaData>
+    <MetaData title={"Payment"} key={1}></MetaData>
     <CheckoutSteps activeStep={2} />
     <div className="paymentContainer">
     <form className='paymentForm' onSubmit={e => submitHandler(e)}>
